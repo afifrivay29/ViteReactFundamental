@@ -9,7 +9,7 @@ function Search(props) {
     return (
         <>
             <div>cari artikel : <input onChange={changeSearch} /></div>
-            <small>ditemukan 0 data dengan pencarian kata {search}</small>
+            <small>ditemukan {props.totalPost} data dengan pencarian kata {search}</small>
         </>
     )
 }
