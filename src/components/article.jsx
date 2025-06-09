@@ -1,19 +1,8 @@
-function Article() {
-  const name = "Afif";
-  const titles = ["Tutorial React.JS", "Tutorial Node.JS", "Tutorial Next.JS"];
+function Article(props) {
   return (
     <>
-      <div>Ini adalah komponen pertama</div>
-      <p>Author: {name}</p>
-      <div>
-        {titles.map((title) => {
-          return (
-            <>
-              <div>{title}</div>
-            </>
-          );
-        })}
-      </div>
+      <h3>{props.title}</h3>
+      <small>Date : {props.date}, tags : {props.tags.join(", ")}</small>
     </>
   );
 }
