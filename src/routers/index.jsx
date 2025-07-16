@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
 
 import { posts, postById } from "../apis/loaders"
+import ErrorPage from "../components/ErrorPage"
 
 import Home from "../pages/Homepage"
 import About from "../pages/About"
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
    {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
         {
             path: "/",
@@ -20,12 +22,14 @@ export const router = createBrowserRouter([
         {
             path: "/blog/:id",
             element: <Post />,
-            loader: postById
+            loader: postById,
+            errorElement: <ErrorPage />
         },
         {
             path: "/blog",
             element: <Blog />,
-            loader: posts
+            loader: posts,
+            errorElement: <ErrorPage />
         },
         {
             path: "/about",
