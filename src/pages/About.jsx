@@ -1,7 +1,7 @@
 function About() {
     return (
         <>
-            <div>Ini halaman About</div>
+            <h1>Ini halaman About</h1>
         </>
     )
 }
